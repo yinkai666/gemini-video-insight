@@ -63,72 +63,48 @@
 - Node.js 18 或更高版本
 - Google Gemini API 密钥（[在此获取](https://ai.google.dev/)）
 
-### 快速开始（Windows）
+### 快速开始
 
+**Windows:**
 ```bash
-# 1. 克隆仓库
+# 克隆并运行 - start.bat 会自动处理一切！
 git clone https://github.com/yinkai666/gemini-video-insight.git
 cd gemini-video-insight
-
-# 2. 创建并激活虚拟环境
-python -m venv venv
-.\venv\Scripts\activate
-
-# 3. 安装 Python 依赖
-pip install -r requirements.txt
-
-# 4. 运行应用（自动安装 npm 依赖并启动前后端服务器）
 start.bat
 ```
 
-在浏览器中访问 `http://localhost:3000`。
-
-### 手动安装（macOS/Linux）
-
+**macOS/Linux:**
 ```bash
-# 1. 克隆仓库
 git clone https://github.com/yinkai666/gemini-video-insight.git
 cd gemini-video-insight
 
-# 2. 创建并激活虚拟环境
 python3 -m venv venv
 source venv/bin/activate
-
-# 3. 安装 Python 依赖
 pip install -r requirements.txt
-
-# 4. 安装 Node 依赖并构建前端
 npm install
-npm run build
-
-# 5. 启动后端服务器
-python main.py
+npm run dev
 ```
 
 在浏览器中访问 `http://localhost:3000`。
 
 ## 🚀 使用方法
 
-### Windows 用户
+### Windows 批处理脚本
 
-- **完整启动**：运行 `start.bat`（同时启动前端和后端）
-- **仅后端**：运行 `start-backend.bat`
-- **前端开发**：运行 `start-frontend.bat`（支持热重载）
-- **停止所有**：运行 `stop.bat`
+- **start.bat** - 启动所有服务（首次运行自动安装）
+- **start-backend.bat** - 仅启动后端
+- **start-frontend.bat** - 仅启动前端
+- **stop.bat** - 停止所有服务器
 
-### 开发模式（可选）
-
-用于前端开发并启用热重载：
+### 手动启动
 
 ```bash
-# 终端 1：启动后端
+# 终端 1：后端
 python main.py
 
-# 终端 2：启动前端开发服务器
+# 终端 2：前端
 npm run dev
 ```
-
-前端开发服务器运行在 `http://localhost:3000`
 
 ## ⚙️ 配置
 

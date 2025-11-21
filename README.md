@@ -63,72 +63,48 @@ A powerful video analysis application powered by Google's Gemini API. Upload vid
 - Node.js 18 or higher
 - Google Gemini API key ([Get one here](https://ai.google.dev/))
 
-### Quick Start (Windows)
+### Quick Start
 
+**Windows:**
 ```bash
-# 1. Clone the repository
+# Clone and run - start.bat handles everything!
 git clone https://github.com/yinkai666/gemini-video-insight.git
 cd gemini-video-insight
-
-# 2. Create and activate virtual environment
-python -m venv venv
-.\venv\Scripts\activate
-
-# 3. Install Python dependencies
-pip install -r requirements.txt
-
-# 4. Run the application (auto-installs npm dependencies and starts both servers)
 start.bat
 ```
 
-Visit `http://localhost:3000` in your browser.
-
-### Manual Setup (macOS/Linux)
-
+**macOS/Linux:**
 ```bash
-# 1. Clone the repository
 git clone https://github.com/yinkai666/gemini-video-insight.git
 cd gemini-video-insight
 
-# 2. Create and activate virtual environment
 python3 -m venv venv
 source venv/bin/activate
-
-# 3. Install Python dependencies
 pip install -r requirements.txt
-
-# 4. Install Node dependencies and build frontend
 npm install
-npm run build
-
-# 5. Start the backend server
-python main.py
+npm run dev
 ```
 
 Visit `http://localhost:3000` in your browser.
 
 ## 🚀 Usage
 
-### Windows Users
+### Windows Batch Scripts
 
-- **Full start**: Run `start.bat` (starts both frontend and backend)
-- **Backend only**: Run `start-backend.bat`
-- **Frontend dev**: Run `start-frontend.bat` (hot reload for development)
-- **Stop all**: Run `stop.bat`
+- **start.bat** - Start everything (auto-setup on first run)
+- **start-backend.bat** - Start backend only
+- **start-frontend.bat** - Start frontend only
+- **stop.bat** - Stop all servers
 
-### Development Mode (Optional)
-
-For frontend development with hot reload:
+### Manual Start
 
 ```bash
-# Terminal 1: Start backend
+# Terminal 1: Backend
 python main.py
 
-# Terminal 2: Start frontend dev server
+# Terminal 2: Frontend
 npm run dev
 ```
-
-Frontend dev server runs at `http://localhost:3000`
 
 ## ⚙️ Configuration
 
