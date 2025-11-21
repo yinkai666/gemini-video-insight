@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__context7__get-library-docs",
+      "mcp__exa__get_code_context_exa",
+      "mcp__exa__web_search_exa",
+      "WebFetch(domain:ai.google.dev)",
+      "Bash(python -m py_compile:*)",
+      "Bash(npm run build)",
+      "Bash(LICENSE)",
+      "Bash(if exist .env.local del .env.local)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

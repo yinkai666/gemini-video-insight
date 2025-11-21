@@ -1,0 +1,44 @@
+{
+  "name": "gemini-video-insight",
+  "version": "1.0.0",
+  "description": "A powerful video analysis application powered by Google's Gemini API. Upload videos or provide URLs to generate AI-powered summaries, chapter breakdowns, and ask questions about video content.",
+  "type": "module",
+  "author": "yinkai666",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yinkai666/gemini-video-insight.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yinkai666/gemini-video-insight/issues"
+  },
+  "homepage": "https://github.com/yinkai666/gemini-video-insight#readme",
+  "keywords": [
+    "gemini",
+    "google-ai",
+    "video-analysis",
+    "ai",
+    "video-summarization",
+    "react",
+    "typescript",
+    "fastapi",
+    "python"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "lucide-react": "^0.554.0",
+    "react-markdown": "^10.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}

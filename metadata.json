@@ -1,0 +1,5 @@
+{
+  "name": "Gemini Video Insight",
+  "description": "A bilingual (English/Chinese) video summarization and Q&A tool powered by a local Python backend and Gemini API.",
+  "requestFramePermissions": []
+}
