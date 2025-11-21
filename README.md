@@ -63,69 +63,72 @@ A powerful video analysis application powered by Google's Gemini API. Upload vid
 - Node.js 18 or higher
 - Google Gemini API key ([Get one here](https://ai.google.dev/))
 
-### 1. Clone the Repository
+### Quick Start (Windows)
 
 ```bash
+# 1. Clone the repository
 git clone https://github.com/yinkai666/gemini-video-insight.git
 cd gemini-video-insight
-```
 
-### 2. Backend Setup
+# 2. Create and activate virtual environment
+python -m venv venv
+.\venv\Scripts\activate
 
-```bash
-# Install Python dependencies
+# 3. Install Python dependencies
 pip install -r requirements.txt
 
-# Create .env file
-cp .env.example .env
-
-# Edit .env and add your Gemini API key
-# GEMINI_API_KEY=your_api_key_here
+# 4. Run the application (auto-installs npm dependencies and starts both servers)
+start.bat
 ```
 
-### 3. Frontend Setup
+Visit `http://localhost:3000` in your browser.
+
+### Manual Setup (macOS/Linux)
 
 ```bash
-# Install Node dependencies
-npm install
+# 1. Clone the repository
+git clone https://github.com/yinkai666/gemini-video-insight.git
+cd gemini-video-insight
 
-# Build frontend
+# 2. Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# 3. Install Python dependencies
+pip install -r requirements.txt
+
+# 4. Install Node dependencies and build frontend
+npm install
 npm run build
+
+# 5. Start the backend server
+python main.py
 ```
+
+Visit `http://localhost:3000` in your browser.
 
 ## 🚀 Usage
 
-### Start the Backend Server
+### Windows Users
+
+- **Full start**: Run `start.bat` (starts both frontend and backend)
+- **Backend only**: Run `start-backend.bat`
+- **Frontend dev**: Run `start-frontend.bat` (hot reload for development)
+- **Stop all**: Run `stop.bat`
+
+### Development Mode (Optional)
+
+For frontend development with hot reload:
 
 ```bash
+# Terminal 1: Start backend
 python main.py
-```
 
-The backend will start on `http://localhost:8000`
-
-### Start the Frontend Development Server (Optional)
-
-For development with hot reload:
-
-```bash
+# Terminal 2: Start frontend dev server
 npm run dev
 ```
 
-The frontend will be available at `http://localhost:3000`
-
-### Production Deployment
-
-For production, the backend serves the built frontend:
-
-```bash
-# Build frontend
-npm run build
-
-# Start backend (serves frontend at http://localhost:8000)
-python main.py
-```
-
-Visit `http://localhost:8000` in your browser.
+Frontend dev server runs at `http://localhost:3000`
 
 ## ⚙️ Configuration
 
